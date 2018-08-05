@@ -2,19 +2,38 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="rascu.stefan.twitchanalysis">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
+        android:name=".TwitchGames"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Twitch Games"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".ui.lists.GameListActivity"
+            android:label="@string/game_list_activity_title"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.details.GameDetailsActivity"
+            android:label="@string/game_details_activity_title"
+            android:theme="@style/AppTheme.NoActionBar.TransparentStatusBar"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".ui.lists.GameListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.lists.GameListActivity" />
+            />
         </activity>
     </application>
 
