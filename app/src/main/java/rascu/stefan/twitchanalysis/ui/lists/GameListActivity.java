@@ -92,7 +92,7 @@ public class GameListActivity extends AppCompatActivity implements GameListContr
                 ContextCompat.getColor(this, R.color.colorAccent), 0, 0, 0);
     }
 
-    //@SuppressLint("Deprecation")
+    @SuppressLint("Deprecation")
     private void swipeRefreshHack() {
         swipeRefreshLayout.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override

@@ -6,9 +6,10 @@ import java.io.Serializable;
 
 public class GameData  implements Serializable{
 
+    @Json(name = "name")
     public final String name;
 
-    @Json(name = "_id")
+    @Json(name = "id")
     public final int id;
 
     @Json(name = "giantbomb_id")

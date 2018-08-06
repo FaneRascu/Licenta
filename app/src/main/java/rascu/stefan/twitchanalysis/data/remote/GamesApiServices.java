@@ -59,7 +59,7 @@ public class GamesApiServices {
     }
 
     public interface GamesApi{
-        @Headers({"Accept: application/vnd.twitchtv.v5+json"})
+        @Headers({"Client-ID: xkpx1ff2owe311sufdja5wcfdiu243"})
         @GET("games/top?limit=50")
         Call<TopGames> getTopGames();
     }
